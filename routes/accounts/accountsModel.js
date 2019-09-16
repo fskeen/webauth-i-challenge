@@ -2,7 +2,7 @@ const db = require('../../data/dbConfig');
 
 module.exports = {
     createAccount,
-    signIn,
+    findBy,
     getProtectedResource
 }
 
@@ -18,8 +18,8 @@ function createAccount(account) {
         .then(ids => findAccount(ids[0]))
 }
 
-function signIn () {
-
+function findBy (username) {
+    return db('accounts').where(username);
 }
 
 function getProtectedResource () {
