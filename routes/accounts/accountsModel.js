@@ -23,5 +23,5 @@ function findBy (username) {
 }
 
 function getProtectedResource () {
-
+    return db('accounts').select('username')
 }
