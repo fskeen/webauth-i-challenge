@@ -13,7 +13,7 @@ const router = express.Router();
 router.use(express.json());
 
 router.get('/', (req, res) => {
-    res.status(200).json({message: "Greetings!"})
+    res.status(200).json({message: "Log in to see user list!"})
 })
 
 router.post('/register', (req, res) => {

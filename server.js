@@ -27,6 +27,9 @@ server.use(session(sessionConfig));
 server.use('/accounts', accountsRouter);
 server.use(express.json());
 
+server.get('/', (req, res) => {
+    res.status(200).json({message: "Greetings!"})
+})
 
 module.exports = server;
 
