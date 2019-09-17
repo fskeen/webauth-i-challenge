@@ -11,6 +11,11 @@ const router = express.Router();
  * Get users
 */
 router.use(express.json());
+
+router.get('/', (req, res) => {
+    res.status(200).json({message: "Greetings!"})
+})
+
 router.post('/register', (req, res) => {
     let account = req.body;
     account.password = bcrypt.hashSync(account.password, 14);
